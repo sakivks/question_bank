@@ -20,5 +20,8 @@
   "bugs": {
     "url": "https://github.com/sakivks/question_bank/issues"
   },
-  "homepage": "https://github.com/sakivks/question_bank#readme"
+  "homepage": "https://github.com/sakivks/question_bank#readme",
+  "dependencies": {
+    "dotenv": "^2.0.0"
+  }
 }
