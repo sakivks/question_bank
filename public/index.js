@@ -1,12 +1,3 @@
-// import React from 'react';
-// import { render } from 'react-dom';
-
-// import Main from './component/Main';
-// import UserDashBoard from './component/UserDashBoard';
-
-// import injectTapEventPlugin from 'react-tap-event-plugin';
-// injectTapEventPlugin();
-
 // import { Router, Route, IndexRoute, Link, browserHistory } from 'react-router';
 
 
@@ -24,12 +15,20 @@
 
 import React from 'react';
 import ReactDOM from 'react-dom';
-
 import Main from './component/Main';
-
+import TabsSwipeable from './component/TabsSwipeable';
+import Buttons from './component/Buttons';
+import { Router, Route, hashHistory } from 'react-router';
 
 import injectTapEventPlugin from 'react-tap-event-plugin';
-
 injectTapEventPlugin();
 
-ReactDOM.render(<Main />, document.getElementById('root'));
+ReactDOM.render((
+  <Main>
+    <Router history={hashHistory}>
+      <Route path="/" component={Buttons} />
+      {/* add the routes here */}
+      <Route path="/ts" component={TabsSwipeable} />
+    </Router>
+  </Main>
+), document.getElementById('root'));
