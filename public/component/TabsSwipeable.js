@@ -1,6 +1,5 @@
 import React from 'react';
 import { Tabs, Tab } from 'material-ui/Tabs';
-// From https://github.com/oliviertassinari/react-swipeable-views
 import SwipeableViews from 'react-swipeable-views';
 
 const styles = {
@@ -17,12 +16,9 @@ const styles = {
 
 export default class TabsExampleSwipeable extends React.Component {
 
-  constructor(props) {
-    super(props);
-    this.state = {
-      slideIndex: 0,
-    };
-  }
+  state = {
+    slideIndex: 0,
+  };
 
   handleChange = (value) => {
     this.setState({
@@ -41,6 +37,7 @@ export default class TabsExampleSwipeable extends React.Component {
           <Tab label="Tab Two" value={1} />
           <Tab label="Tab Three" value={2} />
         </Tabs>
+
         <SwipeableViews
           index={this.state.slideIndex}
           onChangeIndex={this.handleChange}
@@ -55,6 +52,7 @@ export default class TabsExampleSwipeable extends React.Component {
           <div style={styles.slide}>
             slide n°3
           </div>
+
         </SwipeableViews>
       </div>
     );

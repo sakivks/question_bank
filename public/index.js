@@ -1,34 +1,33 @@
-// import { Router, Route, IndexRoute, Link, browserHistory } from 'react-router';
-
-
-// const routes = {
-//   path: '/',
-//   component: Main,
-//   indexRoute: { component: Main },
-//   childRoutes: [
-//     { path: 'app', component: UserDashBoard },
-//     // { path: 'inbox', component: Inbox },
-//   ],
-// };
-
-// render(<Router history={browserHistory} routes={routes} />, document.getElementById('root'));
-
 import React from 'react';
 import ReactDOM from 'react-dom';
 import Main from './component/Main';
 import TabsSwipeable from './component/TabsSwipeable';
 import Buttons from './component/Buttons';
-import { Router, Route, hashHistory } from 'react-router';
+import { Router, Route, hashHistory, Link } from 'react-router';
 
 import injectTapEventPlugin from 'react-tap-event-plugin';
 injectTapEventPlugin();
 
+
+const App = props => (
+  <div>
+    <h1>React Router Tutorial</h1>
+    <ul role="nav">
+      <li><Link to="/bt">Buttons</Link></li>
+      <li><Link to="/ts">TabsSwipeable</Link></li>
+    </ul>
+  </div>
+);
+
 ReactDOM.render((
-  <Main>
-    <Router history={hashHistory}>
-      <Route path="/" component={Buttons} />
-      {/* add the routes here */}
-      <Route path="/ts" component={TabsSwipeable} />
-    </Router>
-  </Main>
+  <div>
+    <Main>
+      <Router history={hashHistory}>
+        <Route path="/" component={App} />
+        <Route path="/bt" component={Buttons} />
+        {/* add the routes here */}
+        <Route path="/ts" component={TabsSwipeable} />
+      </Router>
+    </Main>
+  </div>
 ), document.getElementById('root'));
