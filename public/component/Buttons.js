@@ -3,36 +3,19 @@ import RaisedButton from 'material-ui/RaisedButton';
 import { blue800, white } from 'material-ui/styles/colors';
 
 const styles = {
-  container: {
-    textAlign: 'center',
-    paddingTop: 200,
-  },
-  buttonStyle: {
-    margin: 20,
-  },
+  container: { textAlign: 'center', paddingTop: 200 },
+  buttonStyle: { margin: 20 },
 };
 
-
 export default class Buttons extends Component {
-
-  state = {
-    loginOpen: false,
-    registerOpen: false,
-  };
-
+  state = { loginOpen: false, registerOpen: false };
 
   openRegister = () => {
-    this.setState({
-      registerOpen: true,
-      loginOpen: false,
-    });
+    this.setState({ registerOpen: true, loginOpen: false });
   };
 
   openLogin = () => {
-    this.setState({
-      loginOpen: true,
-      registerOpen: false,
-    });
+    this.setState({ loginOpen: true, registerOpen: false });
   };
 
   render() {

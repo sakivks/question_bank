@@ -26,7 +26,8 @@ var webpackDevMiddleware = require('koa-webpack-dev-middleware');
 var webpackHotMiddleware = require('koa-webpack-hot-middleware');
 var compiler = webpack(webpackConfig);
 app.use(convert(webpackDevMiddleware(compiler, {
-  noInfo: true, publicPath: webpackConfig.output.publicPath
+  noInfo: true,
+  publicPath: webpackConfig.output.publicPath
 })));
 app.use(convert(webpackHotMiddleware(compiler)));
 
@@ -41,8 +42,6 @@ app.use(bodyParser());
 // Routes
 // const serve = require('koa-static');
 // app.use(serve('.'));
-
-
 // Authentication
 // require('./src/auth');
 var router = require('./routes/basicRoutes');

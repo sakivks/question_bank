@@ -8,7 +8,6 @@ import { Router, Route, hashHistory, Link } from 'react-router';
 import injectTapEventPlugin from 'react-tap-event-plugin';
 injectTapEventPlugin();
 
-
 const App = props => (
   <div>
     <h1>React Router Tutorial</h1>
@@ -19,15 +18,17 @@ const App = props => (
   </div>
 );
 
-ReactDOM.render((
+ReactDOM.render(
   <div>
     <Main>
       <Router history={hashHistory}>
         <Route path="/" component={App} />
         <Route path="/bt" component={Buttons} />
-        {/* add the routes here */}
+        {}
         <Route path="/ts" component={TabsSwipeable} />
       </Router>
     </Main>
-  </div>
-), document.getElementById('root'));
+  </div>,
+  document.getElementById('root'),
+);
+

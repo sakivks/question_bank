@@ -3,18 +3,9 @@ import { amber900 } from 'material-ui/styles/colors';
 import getMuiTheme from 'material-ui/styles/getMuiTheme';
 import MuiThemeProvider from 'material-ui/styles/MuiThemeProvider';
 
-const styles = {
-  container: {
-    // textAlign: 'center',
-    // paddingTop: 200,
-  },
-};
+const styles = { container: {} };
 
-const muiTheme = getMuiTheme({
-  palette: {
-    accent1Color: amber900,
-  },
-});
+const muiTheme = getMuiTheme({ palette: { accent1Color: amber900 } });
 
 const Main = props => (
   <MuiThemeProvider muiTheme={muiTheme}>
@@ -24,8 +15,7 @@ const Main = props => (
   </MuiThemeProvider>
 );
 
-Main.propTypes = {
-  children: React.PropTypes.element,
-};
+Main.propTypes = { children: React.PropTypes.element };
 
 export default Main;
+

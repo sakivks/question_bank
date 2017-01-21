@@ -6,8 +6,10 @@ router.get('/', async function(ctx, next) {
   ctx.body = fs.readFileSync('public/index.html', 'utf8');
 });
 
-router.get(/(|^$)/, async function(ctx, next) { // final route if nothing matches
+router.get(/(|^$)/, async function(ctx, next) {
+  // final route if nothing matches
   ctx.redirect('/');
 });
 
 module.exports = router;
+
