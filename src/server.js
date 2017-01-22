@@ -29,7 +29,6 @@ if (process.env.NODE_ENV === 'development') {
   app.use(convert(webpackHotMiddleware(compiler)));
 }
 
-
 // Logger, favicon and bodyparser middlewares
 const logger = require('koa-logger');
 const favicon = require('koa-favicon');
