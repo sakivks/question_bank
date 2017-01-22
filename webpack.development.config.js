@@ -3,17 +3,11 @@ var webpack = require('webpack');
 
 module.exports = {
   devtool: 'cheap-module-eval-source-map',
-  entry: {
-    index: [
-      'webpack-hot-middleware/client',
-      'whatwg-fetch',
-      './public/index',
-    ],
-  },
+  entry: { index: [ 'webpack-hot-middleware/client', 'whatwg-fetch', './public/index' ] },
   output: {
     path: path.join(__dirname, 'dist'),
     filename: 'bundle_[name].js',
-    publicPath: '/static/',
+    publicPath: '',
   },
   plugins: [
     new webpack.optimize.OccurenceOrderPlugin(),
@@ -21,12 +15,7 @@ module.exports = {
   ],
   module: {
     loaders: [
-      {
-        test: /\.js$/,
-        loaders: [ 'babel' ],
-        exclude: /node_modules/,
-        include: __dirname,
-      },
+      { test: /\.js$/, loaders: [ 'babel' ], exclude: /node_modules/, include: __dirname },
     ],
   },
 };
