@@ -1,5 +1,11 @@
 'use strict';
 
+var _promise = require('babel-runtime/core-js/promise');
+
+var _promise2 = _interopRequireDefault(_promise);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
 require('dotenv').config();
 
 var Koa = require('koa');
@@ -9,7 +15,7 @@ var app = new Koa();
 
 // Database
 var mongoose = require('mongoose');
-mongoose.Promise = Promise;
+mongoose.Promise = _promise2.default;
 mongoose.connect(process.env.DB_URL);
 console.log('connecting to MongoDB...');
 var db = mongoose.connection;
