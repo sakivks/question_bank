@@ -4,7 +4,7 @@
   "description": "collection of questions, and auto generation of question paper",
   "main": "server.js",
   "scripts": {
-    "test": "echo \"TODO: To add test cases\" && exit 0",
+    "test": "echo \"TODO: demo test cases\" && exit 0",
     "buildDev": "NODE_ENV=development babel src -d build",
     "build": "NODE_ENV=production babel src -d build",
     "buildComplete": "npm run build && webpack --config webpack.production.config.js -p --display-exclude",
