@@ -1,5 +1,7 @@
 # question_bank
 
+[![Codacy Badge](https://api.codacy.com/project/badge/Grade/0dae69cbcee34334b5525210d6b0f56a)](https://www.codacy.com/app/sakivks/question_bank?utm_source=github.com&utm_medium=referral&utm_content=sakivks/question_bank&utm_campaign=badger)
+
 An application to store questions in database and to autogenerate question paper on demand
 
 ##Env variables
