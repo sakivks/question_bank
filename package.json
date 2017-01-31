@@ -7,7 +7,7 @@
     "test": "echo \"TODO: demo test cases\" && exit 0",
     "buildDev": "NODE_ENV=development babel src -d build",
     "build": "NODE_ENV=production babel src -d build",
-    "buildComplete": "npm run build && webpack --config webpack.production.config.js -p --display-exclude",
+    "buildComplete": "npm run build && NODE_ENV=production webpack --config webpack.production.config.js -p --display-exclude",
     "autoBuild": "nodemon --watch src --exec 'npm run buildDev'",
     "start": "node index.js"
   },
