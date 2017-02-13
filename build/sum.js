@@ -7,6 +7,9 @@ var mth = {
   },
   multiply: function multiply(a, b) {
     return a * b;
+  },
+  subtract: function subtract(a, b) {
+    return a - b;
   }
 };
 

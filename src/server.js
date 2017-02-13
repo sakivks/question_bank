@@ -45,7 +45,6 @@ app.use(serve('public/dist'));
 // Authentication
 // require('./src/auth');
 const router = require('./routes/basicRoutes');
-
 app.use(router.routes()).use(router.allowedMethods());
 
 app.listen(process.env.PORT || process.argv[2] || 4000);
