@@ -4,8 +4,8 @@ var webpack = require('webpack');
 module.exports = {
   devtool: 'cheap-module-eval-source-map',
   entry: {
-    index: [ 'webpack-hot-middleware/client', 'whatwg-fetch', './public/index' ],
-    home: [ 'webpack-hot-middleware/client', 'whatwg-fetch', './public/home' ],
+    index: [ 'webpack-hot-middleware/client', './public/index' ],
+    home: [ 'webpack-hot-middleware/client', './public/home' ],
   },
   output: { path: path.join(__dirname, 'dist'), filename: 'bundle_[name].js', publicPath: '' },
   plugins: [
@@ -18,4 +18,3 @@ module.exports = {
     ],
   },
 };
-

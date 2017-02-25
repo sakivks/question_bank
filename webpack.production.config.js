@@ -2,7 +2,7 @@ var path = require('path');
 var webpack = require('webpack');
 
 module.exports = {
-  entry: { index: [ 'whatwg-fetch', './public/index' ], home: [ 'whatwg-fetch', './public/home' ] },
+  entry: { index: [ './public/index' ], home: [ './public/home' ] },
   output: { path: path.join(__dirname, 'public/dist'), filename: 'bundle_[name].js' },
   plugins: [
     new webpack.DefinePlugin({ 'process.env': { NODE_ENV: JSON.stringify('production') } }),

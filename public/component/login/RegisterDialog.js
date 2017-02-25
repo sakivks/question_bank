@@ -2,9 +2,7 @@ import React, { Component, PropTypes } from 'react';
 import Dialog from 'material-ui/Dialog';
 import FlatButton from 'material-ui/FlatButton';
 import TextField from 'material-ui/TextField';
-// import Colors from 'material-ui/styles/colors';
-// import { deepOrange500 } from 'material-ui/styles/colors';
-import util from '.././util';
+import util from './../../util';
 
 // import 'whatwg-fetch';
 export default class RegisterDialog extends Component {

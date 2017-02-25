@@ -1,8 +1,9 @@
-import 'whatwg-fetch';
+import axios from 'axios';
+import config from './config';
 
 const util = {
   fetch(url, details) {
-    return fetch(url, { ...details, credentials: 'same-origin' });
+    return axios(url, { ...details, credentials: 'same-origin' });
   },
   clearSession() {
     const cookies = document.cookie.split(';');
@@ -16,11 +17,12 @@ const util = {
     localStorage.removeItem('user.name');
     window.location.replace('/');
   },
-  config: {
-    fbAppId: 175573409567618,
-    loginRedirect: 'https://chat101.herokuapp.com/fbR',
-    scope: 'public_profile,email,user_friends,user_birthday,user_about_me,read_custom_friendlists',
-  },
+  config,
 };
 
+// : {
+//     fbAppId: 175573409567618,
+//     loginRedirect: 'https://chat101.herokuapp.com/fbR',
+//     scope: 'public_profile,email,user_friends,user_birthday,user_about_me,read_custom_friendlists',
+//   },
 export default util;
