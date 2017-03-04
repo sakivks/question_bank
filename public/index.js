@@ -15,7 +15,7 @@ const App = props => (
     <ul role="nav">
       <li><Link to="/bt">Buttons</Link></li>
       <li><Link to="/ts">TabsSwipeable</Link></li>
-      <li><Link to="/qb">QuestionBank</Link></li>
+      <li><Link to="/qb">QuestionBank - WIP</Link></li>
     </ul>
   </div>
 );

@@ -1,8 +1,8 @@
 const env = process.env.NODE_ENV;
 const domain = do {
-  if (env === 'production') 'https://question-bank-sakivks.herokuapp.com';
-  else if (env === 'development') 'https://question-bank-sakivks.herokuapp.com';
-  else 'https://question-bank-sakivks.herokuapp.com';
+  if (env === 'production') ('https://question-bank-sakivks.herokuapp.com');
+  else if (env === 'development') ('https://question-bank-sakivks.herokuapp.com');
+  else ('https://question-bank-sakivks.herokuapp.com');
 };
 
 const config = {
