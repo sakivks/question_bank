@@ -28,10 +28,10 @@ export default class TabsExampleSwipeable extends React.Component {
             Swipe to see the next slide.<br />
           </div>
           <div style={styles.slide}>
-            slide n°2
+            Ullas 
           </div>
           <div style={styles.slide}>
-            slide n°3
+            Anant
           </div>
         </SwipeableViews>
       </div>
