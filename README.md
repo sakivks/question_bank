@@ -1,7 +1,29 @@
-# question_bank
+# DC to Essence Integration
+This guide is an attempt to document the designs and concept of integration between 
+DC the internet banking application and Essence the core backend application
 
-An application to store questions in database and to autogenerate question paper on demand
-
-##Env variables
-- __NODE_ENV__=development
-- __DB_URL__=mongodb://sakivks:sakivks@ds139448.mlab.com:39448/sakivks
+## Integrated Functionalities 
+- **Functional**
+  - Payments (Internal, Intrabank, Swift, SEPA)
+  - Standing Orders (**Create** and **Cancel** of Internal, Intrabank, Swift, SEPA)
+  - Term Deposit (Create and Breakage)
+  - Cheque Book Order
+  - Cheque (Stop, Unstop, Cancel)
+  - Statements (Download monthly statements PDF)
+  - Customer onboarding and Account Opening (Including dedup check)
+- **Enquiries**
+  - Account Overview 
+    - GetAccountList 
+    - GetAccountBallance 
+    - GetAccountRelation
+    - GetTermDepositList
+    - GetLoanList
+  - Transaction History
+  - Standing Order List
+- **Data Push**
+  - Customer Push to DC
+  - Account Push
+  - Transaction Push
+  - Exchange Rate Push
+  - EOD Transaction Extract Push
+  
